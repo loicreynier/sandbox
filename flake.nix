@@ -32,7 +32,7 @@
             make_readme = {
               enable = true;
               name = "make-readme";
-              entry = "${pkgs.stdenv.shell} docs/make-gh-readme.sh";
+              entry = "${pkgs.stdenv.shell} .github/make-gh-readme.sh";
               files = "README\.md";
               language = "system";
               pass_filenames = false;

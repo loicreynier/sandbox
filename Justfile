@@ -1,3 +1,3 @@
 # Build GitHub README
 build-readme:
-	sh docs/make-gh-readme.sh
+	@sh .github/make-gh-readme.sh
