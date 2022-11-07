@@ -176,7 +176,7 @@ def gmres(
     a : ndarray
         Linear system matrix. Has shape (n, n).
     b : ndarray
-        Right hand side of the linear sysem. Has shape (n,).
+        Right hand side of the linear system. Has shape (n,).
     x0 : ndarray
         Starting guess for the solution. Has shape (n,).
     maxiter : int, optional
