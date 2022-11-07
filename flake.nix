@@ -55,6 +55,10 @@
             prettier.enable = true;
             shellcheck.enable = true;
             statix.enable = true;
+            typos = {
+              enable = true;
+              entry = "${pkgs.typos}/bin/typos";
+            };
           };
         };
       };
