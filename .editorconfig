@@ -16,7 +16,7 @@ trim_trailing_whitespace = false
 [*.{nix,yaml}]
 indent_size = 2
 
-[Justfile]
+[{Justfile,Makefile}]
 indent_style = tab
 
 [*.lock]

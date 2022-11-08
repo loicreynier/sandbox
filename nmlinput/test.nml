@@ -1,0 +1,4 @@
+&sample
+test_int = 1
+test_logical = .true.
+/
