@@ -10,4 +10,4 @@ Sandbox for random tests that I may need in the future.
 - `isosurf-skimage`: plot isosurfaces calculated with scikit-image
 - `jmtpfs-pyudev`: monitor and mount MTP devices using `jmtpfs` and pyudev
 - `nmlinput`: Fortran helper routines to use namelists as input files
-- `regula-falsi`: unoptimized C implementation of the Regula falsi method
+- `regula-falsi`: unoptimized C implementation of the Regula Falsi method
