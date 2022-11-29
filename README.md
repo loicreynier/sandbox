@@ -5,6 +5,7 @@ Sandbox for random tests that I may need in the future.
 ## Sand castles
 
 - `detect-windarkmode`: dirty function to detect Windows dark mode
+- `f03cli`: Fortran 2003 CLI argument parser example
 - `gmres`: dirty unoptimized Python implementation of the GMRES algorithm
 - `gmres-sp`: wrapper for SciPy's GMRES
 - `isosurf-skimage`: plot isosurfaces calculated with scikit-image
