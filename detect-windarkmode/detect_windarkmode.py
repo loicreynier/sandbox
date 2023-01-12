@@ -4,7 +4,7 @@ import winreg
 import os
 
 
-def darkmode_enabled():
+def darkmode_enabled() -> bool:
     """Whether Windows darkmode is enabled."""
     registry = winreg.ConnectRegistry(None, winreg.HKEY_CURRENT_USER)
     reg_keypath = (
@@ -27,6 +27,10 @@ def darkmode_enabled():
 
 if __name__ == "__main__":
     if os.name == "nt":
-        print(darkmode_enabled())
+        try:
+            import darkdetect
+            print(darkdetect.isDark())
+        except ImportError:
+            print(darkmode_enabled())
     else:
         raise ValueError("Not running on Windows")
