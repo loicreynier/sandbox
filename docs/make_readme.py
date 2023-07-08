@@ -3,7 +3,7 @@
 """Script to generate the `README.md`"""
 
 __author__ = ["Loïc Reynier <loic@loicreynier.fr>"]
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 
 import os
 import glob
@@ -15,7 +15,7 @@ TEMPLATE = "template.md"
 
 def make_readme() -> None:
     """Make `README.md` from `template.md`."""
-    castles = glob.glob("../*/")
+    castles = sorted(glob.glob("../*/"))
     castles.remove("../docs/")
     with open(README, "w", encoding="utf-8") as readme_file:
         # Copy template
