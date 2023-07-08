@@ -1,0 +1,26 @@
+def factorial_recursive(n, f0=1):
+    match n:
+        case 0:
+            return f0
+        case int() if n > 0:
+            return factorial_recursive(n-1, f0*n)
+    else:
+        raise TypeError("the argument to factorial must be an integer >= 0")
+
+
+"""
+Iterative approach using `reduce` (as in old Python) and `addpattern`:
+
+- `(*)` is equivalent to `lambda x, y: x*y`/`(x, y) -> x*y`
+- `reduce$(*)` is equivalent to `(*args, **kwargs) -> reduce((*), *args, **kwargs)`
+
+"""
+
+def factorial(0) = 1
+
+addpattern def factorial(int() as n if n > 0) =
+    range(1, n+1) |> reduce$(*)
+
+# Test cases
+3 |> factorial_recursive |> print
+3 |> factorial |> print

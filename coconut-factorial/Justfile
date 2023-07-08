@@ -1,0 +1,2 @@
+run:
+	coconut --run ./factorial.coco
