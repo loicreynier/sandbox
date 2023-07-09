@@ -64,11 +64,6 @@
           ];
           inherit (self.checks.${system}.pre-commit-check) shellHook;
         };
-        coconut-factorial = pkgs.mkShell {
-          propagatedBuildInputs = with pkgs; [
-            coconut
-          ];
-        };
       };
     });
 }
