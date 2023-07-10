@@ -13,7 +13,7 @@ indent_size = 4
 indent_size = unset
 trim_trailing_whitespace = false
 
-[*.{nix,yaml}]
+[*.{c,nix,yaml}]
 indent_size = 2
 
 [{Justfile,Makefile}]
