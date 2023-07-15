@@ -62,7 +62,10 @@
           propagatedBuildInputs = with pkgs; [
             just
           ];
-          inherit (self.checks.${system}.pre-commit-check) shellHook;
+          shellHook = ''
+            ${self.checks.${system}.pre-commit-check.shellHook}
+            export NIX_PATH="nixpkgs=${inputs.nixpkgs}"
+          '';
         };
       };
     });
