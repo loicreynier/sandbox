@@ -44,3 +44,27 @@ ax.plot_trisurf(
 # tikzplotlib.save("fig.tex")
 
 plt.show()
+
+# Plotting with Plotly
+# Sources:
+# https://plotly.com/python/3d-mesh/#intensity-values-defined-on-vertices-or-cells
+# https://stackoverflow.com/questions/61822942
+# https://chart-studio.plotly.com/~empet/14613.embed
+# import plotly.graph_objects as go
+# x, y, z = verts.T
+# i, j, k = faces.T
+# fig = go.Figure(
+#     data=(
+#         go.Mesh3d(
+#             x=x,
+#             y=y,
+#             z=z,
+#             i=i,
+#             j=j,
+#             k=k,
+#             colorscale=CMAP_NAME,
+#             intensity=z,
+#         )
+#     )
+# )
+# fig.show()
