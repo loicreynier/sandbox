@@ -12,3 +12,4 @@ Sandbox environment for conducting small tests that I maintain a record of.
 - `isosurf-skimage`: Isosurface calculation with scikit-image example.
 - `jmtpfs-pyudev`: MTP device monitoring and mounting dirty script using `jmtpfs` and pyudev.
 - `regula-falsi.c`: Unoptimized C implementation of the Regula Falsi method.
+- `typst-demo`: Sandbox article written using [Typst](https://typst.app) to test its features

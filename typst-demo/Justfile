@@ -1,0 +1,3 @@
+# Compile document
+compile:
+	typst compile ./main.typ
