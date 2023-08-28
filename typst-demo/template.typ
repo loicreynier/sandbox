@@ -11,19 +11,23 @@
   )
 
   set text(
-    font: "Linux Libertine",
+    font: "New Computer Modern",
     size: 11pt,
   )
 
   set align(center)
   text(17pt)[*#title*]
 
+  set math.equation(
+    numbering: "(1)",
+    supplement: [Eq.],
+  )
+
   show heading: hname => [
     #set align(center)
     #set text(12pt, weight: "bold")
     #block(smallcaps(hname.body))
   ]
-
 
   let count = authors.len()
   let ncols = calc.min(count, 3)

@@ -58,17 +58,19 @@ we derive formulae for the energy spectra of their fiery exhalations.
 
 In the realm of wyverns,
 their fire energy spectrum,
-denoted $E_"W"$,
+denoted $E_upright(W)$,
 is expressed by the mystical formula
-$ E_upright(W)(k) = A_upright(W) k^(-5/3) exp(-k/k_0), $
+$ E_upright(W)(k) = A_upright(W) k^(-5/3) exp(-k/k_0), $ <wyvern_spectra>
 where
 $k$ is the wavenumber representing the scale of turbulence,
 $A_upright(W)$ is a dragon-specific constant
 and $k_0$ is the characteric wavenumber indicating the peak energy scale.
 
-For traditional dragons, their fire energy spectrum, denoted as $E_"D"(k)$,
+For traditional dragons, their fire energy spectrum, denoted as $E_upright(D)(k)$,
 embodies a more intricate nature and is represented by the enchanted formula
-$ E_upright(D)(k) = A_upright(D) k^(-5/3) + B_upright(D) k^(-2) exp(-k/k_0), $
+$ E_upright(D)(k)
+  = A_upright(D) k^(-5/3) + B_upright(D) k^(-2) exp(-k/k_0),
+$ <dragon_spectra>
 where
 - $A_upright(D)$ is a unique constant tied to the dragon's ancient lineage,
 - $B_upright(D)$ represents the influence of rare dragon traits,
