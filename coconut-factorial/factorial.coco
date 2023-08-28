@@ -12,7 +12,8 @@ def factorial_recursive(n, f0=1):
 Iterative approach using `reduce` (as in old Python) and `addpattern`:
 
 - `(*)` is equivalent to `lambda x, y: x*y`/`(x, y) -> x*y`
-- `reduce$(*)` is equivalent to `(*args, **kwargs) -> reduce((*), *args, **kwargs)`
+- `reduce$(*)` is equivalent to
+    `(*args, **kwargs) -> reduce((*), *args, **kwargs)`
 
 """
 

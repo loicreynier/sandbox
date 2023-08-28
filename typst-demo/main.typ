@@ -38,7 +38,8 @@ Isotropic turbulence,
 the mesmerizing fluid behavior characterized by energy cascades across scales,
 is at the heart of this phenomenon.
 This study ventures into the magical world of dragons to examine
-the isotropic turbulence in the fire breath of wyverns and traditional dragons,
+the isotropic turbulence in the fire breath of
+wyverns and traditional dragons,
 providing unprecedented insights through the formulation of energy spectra
 
 = Methodology
@@ -66,7 +67,8 @@ $k$ is the wavenumber representing the scale of turbulence,
 $A_upright(W)$ is a dragon-specific constant
 and $k_0$ is the characteric wavenumber indicating the peak energy scale.
 
-For traditional dragons, their fire energy spectrum, denoted as $E_upright(D)(k)$,
+For traditional dragons, their fire energy spectrum,
+denoted as $E_upright(D)(k)$,
 embodies a more intricate nature and is represented by the enchanted formula
 $ E_upright(D)(k)
   = A_upright(D) k^(-5/3) + B_upright(D) k^(-2) exp(-k/k_0),
@@ -89,12 +91,14 @@ Fourier Transform techniques.
 
 The spectral analyses of wyverns' and traditional dragons' fire breath
 reveal captivating distinctions.
-Wyverns' fire exhibits a well-defined inertial subrange in the energy spectrum,
+Wyverns' fire exhibits a well-defined
+inertial subrange in the energy spectrum,
 consistent with the classical $-5/3$ power-law scaling predicted
 by Kolmogorov turbulence theory.
 In contrast,
 traditional dragons' fire unveils a fascinating dual-cascade behavior,
-characterized by $-5/3$ scaling at large scales and $-2$ scaling at small scales.
+characterized by $-5/3$ scaling at large scales
+and $-2$ scaling at small scales.
 This unique dual-cascade phenomenon suggests an intriguing interplay
 of elemental forces and mythical intricacies.
 
@@ -112,7 +116,8 @@ giving rise to the contrasting turbulence behaviors.
 
 = Conclusion
 
-By formulating energy spectra for wyverns' and traditional dragons' fire breath,
+By formulating energy spectra for
+wyverns' and traditional dragons' fire breath,
 this study provides a deeper understanding of the isotropic turbulence
 at play in their awe-inspiring abilities.
 The enchanting discoveries made in this study transcend
@@ -123,9 +128,11 @@ and the revelation of dual-cascade behaviors
 can inspire advancements in fluid dynamics, combustion science,
 and energy generation research.
 Moreover, this exploration of isotropic turbulence in dragon fire breath may
-spark novel applications in sustainable energy harnessing and environmental studies.
+spark novel applications in sustainable energy harnessing
+and environmental studies.
 The harmonious alliance between dragon magic and human science offers
-a unique gateway to exploring the enigmatic dynamics of these mythical creatures,
+a unique gateway to exploring
+the enigmatic dynamics of these mythical creatures,
 enriching both realms with newfound wisdom and wonder.
 
 // vim: ft=text
