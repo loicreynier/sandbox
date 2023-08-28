@@ -5,6 +5,11 @@
   doc,
 ) = {
 
+  set document(
+    title: title,
+    author: authors.first().name,
+  )
+
   set page(
     paper: "a4",
     numbering: "1/1",

@@ -14,10 +14,10 @@
 ]
 
 #show: doc => conf(
-  title: [
-    Feeding the Flame: Exploring the Mysteries of \
+  title: "
+    Feeding the Flame: Exploring the Mysteries of
     Isotropic Turbulence from Dragon's Fire
-  ],
+  ",
   authors: (
     (
       name: "Loïc Reynier",
