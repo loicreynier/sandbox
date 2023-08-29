@@ -12,3 +12,4 @@ scikit-image
 isosurface
 typst
 advection-equation
+gmres
