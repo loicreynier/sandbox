@@ -24,7 +24,6 @@ ax.plot_trisurf(
     cmap=CMAP_NAME,
 )
 
-# -- editorconfig-checker-disable
 # Plotting with Matplolib `Poly3DCollection` API
 # Source (scikit-image doc):
 # https://scikit-image.org/docs/stable/auto_examples/edges/plot_marching_cubes.html
@@ -51,7 +50,6 @@ plt.show()
 # https://plotly.com/python/3d-mesh/#intensity-values-defined-on-vertices-or-cells
 # https://stackoverflow.com/questions/61822942
 # https://chart-studio.plotly.com/~empet/14613.embed
-# -- editorconfig-checker-enable
 # import plotly.graph_objects as go
 # x, y, z = verts.T
 # i, j, k = faces.T
