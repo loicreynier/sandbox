@@ -1,3 +1,3 @@
 # `gmres.py`
 
-Dirty unoptimized Python implementation of the GMRES algorithm
+Dirty unoptimized Python implementation of the GMRES algorithm.

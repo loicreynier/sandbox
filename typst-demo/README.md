@@ -1,6 +1,6 @@
 # `typst-demo`
 
-Sandbox article written using [Typst](https://typst.app) to test its features
+Sandbox article written using [Typst](https://typst.app) to test its features.
 
 ## About
 
