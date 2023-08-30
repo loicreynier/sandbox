@@ -13,3 +13,4 @@ isosurface
 typst
 advection-equation
 gmres
+scipy
