@@ -16,5 +16,6 @@ Sandbox environment for conducting small tests that I maintain a record of.
 - `gmres.py`: Dirty unoptimized Python implementation of the GMRES algorithm.
 - `isosurf-skimage`: Isosurface calculation with scikit-image example.
 - `jmtpfs-pyudev`: MTP device monitoring and mounting dirty script using `jmtpfs` and pyudev.
+- `python-perf`: Python performance test scripts
 - `regula-falsi.c`: Unoptimized C implementation of the Regula Falsi method.
 - `typst-demo`: Sandbox article written using [Typst](https://typst.app) to test its features.
