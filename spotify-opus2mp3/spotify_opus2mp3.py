@@ -32,6 +32,12 @@ Currently,
 no tests are implemented to verify
 whether the input are indeed in OPUS format
 or if the artist metadata has proper formatting.
+The only implemented test checks
+whether the input file is not already an MP3
+(extension test on the file name).
+If that's the case,
+the conversion is not performed,
+and the metadata is updated directly.
 """
 
 from pathlib import Path
@@ -46,7 +52,8 @@ def main(files: List[Path]):
     suffix = ".mp3"
     for filename in files:
         filename = Path(filename)
-        convert(filename, suffix=suffix)
+        if filename.suffix != suffix:
+            convert(filename, suffix=suffix)
         update_artist(filename.with_suffix(suffix))
 
 
