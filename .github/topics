@@ -18,3 +18,4 @@ numpy
 performance-testing
 spotify
 ffmpeg-python
+pyfftw
