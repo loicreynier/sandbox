@@ -1,0 +1,7 @@
+let base_price: Money = 30€
+let price: Money / Energy = 0.2276 euro / kWh
+
+fn electricity_price(consumption: Energy) -> Money =
+    base_price + consumption * price
+
+print(electricity_price(177 kWh))
