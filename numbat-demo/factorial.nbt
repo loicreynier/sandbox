@@ -1,0 +1,7 @@
+fn factorial(n: Scalar) -> Scalar =
+    if n < 1
+        then 1
+        else n × factorial(n - 1)
+
+# Compare result with builtin
+assert_eq(factorial(10), 10!)
