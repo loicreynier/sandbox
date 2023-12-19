@@ -15,6 +15,7 @@ Sandbox environment for conducting small tests that I maintain a record of.
 - `isosurf-skimage`: Isosurface calculation with scikit-image example.
 - `jmtpfs-pyudev`: MTP device monitoring and mounting dirty script using `jmtpfs` and pyudev.
 - `numbat-demo`: Small scripts to test [Numbat](https://numbat.dev) features.
+- `porn.py`: Cool and horrific miscellaneous Python stuff.
 - `presenterm-demo`: Presentation written using [presenterm](https://github.com/mfontanini/presenterm) to test its features.
 - `pyfftw-demo`: PyFFTW example scripts.
 - `python-perf`: Python performance test scripts.
