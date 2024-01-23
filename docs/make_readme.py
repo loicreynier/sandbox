@@ -3,7 +3,11 @@
 """Script to generate the `README.md`"""
 
 __author__ = ["Loïc Reynier <loic@loicreynier.fr>"]
-__version__ = "0.1.1"
+__version__ = "0.1.2"
+__changelog__ = {
+    "0.1.1": "sort castles",
+    "0.1.2": "add path to castles",
+}
 
 import os
 import glob
@@ -31,7 +35,9 @@ def make_readme() -> None:
                     lines = src_file.readlines()
                     title = lines[0][2:-1]
                     desc = lines[2][:-1]
-                    readme_file.write(f"- {title}: {desc}\n")
+                    readme_file.write(
+                        f"- [{title}](./{path[3:-1]}): {desc}\n"
+                    )
             except FileNotFoundError as error:
                 print(error)
                 pass

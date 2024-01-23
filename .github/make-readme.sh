@@ -2,4 +2,7 @@
 
 cd "$(dirname "$0")" || exit
 # echo "$(basename "$0"): running in $(pwd)"
-{ cat "readme-header.html"; tail -n +2 "../README.md"; } > "README.md"
+(
+    cat "readme-header.html"
+    tail -n +2 "../README.md"
+) | sed 's|(./|(../|g' > "README.md"
