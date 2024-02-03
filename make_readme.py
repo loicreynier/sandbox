@@ -3,24 +3,24 @@
 """Script to generate the `README.md`"""
 
 __author__ = ["Loïc Reynier <loic@loicreynier.fr>"]
-__version__ = "0.1.2"
+__version__ = "0.1.3"
 __changelog__ = {
     "0.1.1": "sort castles",
     "0.1.2": "add path to castles",
+    "0.1.3": "move script in repo root",
 }
 
 import os
 import glob
 import sys
 
-README = "../README.md"
-TEMPLATE = "template.md"
+README = "README.md"
+TEMPLATE = "readme-template.md"
 
 
 def make_readme() -> None:
     """Make `README.md` from `template.md`."""
-    castles = sorted(glob.glob("../*/"))
-    castles.remove("../docs/")
+    castles = sorted(glob.glob("*/"))
     with open(README, "w", encoding="utf-8") as readme_file:
         # Copy template
         with open(TEMPLATE, "r", encoding="utf-8") as template_file:
@@ -35,9 +35,7 @@ def make_readme() -> None:
                     lines = src_file.readlines()
                     title = lines[0][2:-1]
                     desc = lines[2][:-1]
-                    readme_file.write(
-                        f"- [{title}](./{path[3:-1]}): {desc}\n"
-                    )
+                    readme_file.write(f"- [{title}](./{path[:-1]}): {desc}\n")
             except FileNotFoundError as error:
                 print(error)
                 pass

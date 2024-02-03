@@ -30,7 +30,7 @@
             make_readme = {
               enable = true;
               name = "make-readme";
-              entry = "${pkgs.python3}/bin/python docs/make_readme.py";
+              entry = "${pkgs.python3}/bin/python make_readme.py";
               files = ".*\\.(nix|py|md)";
               language = "system";
               pass_filenames = false;
