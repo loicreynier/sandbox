@@ -18,6 +18,7 @@ Sandbox environment for conducting small tests that I maintain a record of.
 - [`numbat-demo`](./numbat-demo): Small scripts to test [Numbat](https://numbat.dev) features.
 - [`porn.py`](./porn.py): Cool and horrific miscellaneous Python stuff.
 - [`presenterm-demo`](./presenterm-demo): Presentation written using [presenterm](https://github.com/mfontanini/presenterm) to test its features.
+- [`pwsh-magic`](./pwsh-magic): Random PowerShell scripts.
 - [`pyfftw-demo`](./pyfftw-demo): PyFFTW example scripts.
 - [`python-perf`](./python-perf): Python performance test scripts.
 - [`regula-falsi.c`](./regula-falsi.c): Unoptimized C implementation of the Regula Falsi method.
