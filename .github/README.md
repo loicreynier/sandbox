@@ -24,5 +24,6 @@ Sandbox environment for conducting small tests that I maintain a record of.
 - [`pyfftw-demo`](../pyfftw-demo): PyFFTW example scripts.
 - [`python-perf`](../python-perf): Python performance test scripts.
 - [`regula-falsi.c`](../regula-falsi.c): Unoptimized C implementation of the Regula Falsi method.
+- [`rnm-go`](../rnm-go): Useless CLI util to rename files written in Go.
 - [`spotify-opus2mp3`](../spotify-opus2mp3): Python script to convert OPUS files to MP3 for Spotify local use.
 - [`typst-demo`](../typst-demo): Sandbox article written using [Typst](https://typst.app) to test its features.
