@@ -3,7 +3,6 @@ python
 windows
 dark-mode
 coconut
-factorial
 udev
 regula-falsi
 fortran2003
@@ -13,9 +12,9 @@ isosurface
 typst
 advection-equation
 gmres
-scipy
-numpy
 performance-testing
 spotify
 ffmpeg-python
 pyfftw
+nix
+go
