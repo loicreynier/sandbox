@@ -19,14 +19,26 @@
   }: let
     supportedSystems = ["x86_64-linux"];
   in
-    flake-utils.lib.eachSystem supportedSystems (system: let
+    {
+      templates = {
+        flake = {
+          path = ./.templates/flake;
+          description = "Sandbox with flake";
+        };
+        shell = {
+          path = ./.templates/shell;
+          description = "Sandbox with only a Nix shell";
+        };
+      };
+    }
+    // flake-utils.lib.eachSystem supportedSystems (system: let
       pkgs = import nixpkgs {inherit system;};
-    in rec {
+    in {
       checks = {
         pre-commit-check = pre-commit-hooks.lib.${system}.run {
           src = ./.;
 
-          hooks = with pkgs; {
+          hooks = {
             make_readme = {
               enable = true;
               name = "make-readme";
