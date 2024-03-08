@@ -106,9 +106,7 @@ def test_arnoldi_iteration(
     # Check that Q_n is orthogonal
     # plt.imshow(qn.conj().T @ qn)
     # plt.show()
-    assert np.allclose(
-        qn.conj().T @ qn, np.eye(qn.shape[1]), rtol=rtol, atol=atol
-    )
+    assert np.allclose(qn.conj().T @ qn, np.eye(qn.shape[1]), rtol=rtol, atol=atol)
 
     # Check that AQ_n = Q_(n+1)H
     assert np.allclose(a @ qn, q @ h, rtol=rtol, atol=atol)
