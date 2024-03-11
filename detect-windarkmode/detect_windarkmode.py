@@ -6,9 +6,7 @@ import winreg
 def darkmode_enabled() -> bool:
     """Whether Windows darkmode is enabled."""
     registry = winreg.ConnectRegistry(None, winreg.HKEY_CURRENT_USER)
-    reg_keypath = (
-        r"SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize"
-    )
+    reg_keypath = r"SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize"
     try:
         reg_key = winreg.OpenKey(registry, reg_keypath)
     except FileNotFoundError:

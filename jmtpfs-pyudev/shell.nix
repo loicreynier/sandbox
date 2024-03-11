@@ -15,7 +15,6 @@ in
   pkgs.mkShell {
     packages = with pkgs; [
       jmtpfs
-      ruff
       pythonWithPackages
     ];
   }

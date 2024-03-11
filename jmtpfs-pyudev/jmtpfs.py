@@ -1,13 +1,13 @@
 """Script monitoring MTP devices actions for mount/demount.
 
-The monitoring is performed through a pyudev `Monitor` and devices
-are mounted using the `jmtpfs` command via `os.system`.
+The monitoring is performed through a pyudev `Monitor`
+and devices are mounted using the `jmtpfs` command via `os.system`.
 
-The monitoring is dirty, there is no exception capturing if devices
-fail to mount/unmount.
+The monitoring is dirty, there is no exception capturing
+if devices fail to mount/unmount.
 """
 
-__author__ = ["Loïc Reynier <loic@loicreynier.fr>"]
+__author__ = ["Loïc Reynier <loic+dev@loicreynier.fr>"]
 __version__ = "0.1.0"
 
 import os

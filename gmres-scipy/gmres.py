@@ -1,5 +1,3 @@
-# pylint: disable=invalid-name
-
 """Wrapper for the GMRES provided by SciPy."""
 
 import sys
@@ -17,7 +15,6 @@ class GMRESSaturation(Warning):
     """GMRES saturation warning."""
 
 
-# pylint: disable=too-few-public-methods
 class GMRESCallback:
     """Callback for ``scipy.sparse.linalg``.
 

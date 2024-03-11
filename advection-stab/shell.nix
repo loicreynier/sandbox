@@ -14,8 +14,7 @@
     ]);
 in
   pkgs.mkShell {
-    packages = with pkgs; [
-      ruff
+    packages = [
       pythonWithPackages
     ];
   }

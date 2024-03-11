@@ -7,9 +7,7 @@ import matplotlib.pyplot as plt
 CMAP_NAME = "inferno"
 N = 16
 
-x, y, z = (
-    np.pi * np.mgrid[-1 : 1 : N * 1.0j, -1 : 1 : N * 1.0j, -1 : 1 : N * 1.0j]
-)
+x, y, z = np.pi * np.mgrid[-1 : 1 : N * 1.0j, -1 : 1 : N * 1.0j, -1 : 1 : N * 1.0j]
 f = np.cos(x) + np.cos(y) + np.cos(z)
 verts, faces, normals, values = skimage.measure.marching_cubes(f)
 

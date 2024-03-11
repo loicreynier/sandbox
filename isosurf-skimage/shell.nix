@@ -6,7 +6,7 @@ let
     sha256 = "sha256-qR+/HFGZxlAmSKUIlQOM+WRIcEG6oRrdVm4KUvS7694=";
   }) {};
 
-  dontCheckPython = drv: drv.overridePythonAttrs (old: {doCheck = false;});
+  dontCheckPython = drv: drv.overridePythonAttrs (_: {doCheck = false;});
   pythonWithPackages = pkgs.python3.withPackages (p:
     with p; [
       matplotlib
@@ -16,8 +16,7 @@ let
     ]);
 in
   pkgs.mkShell {
-    packages = with pkgs; [
-      ruff
+    packages = [
       pythonWithPackages
     ];
   }

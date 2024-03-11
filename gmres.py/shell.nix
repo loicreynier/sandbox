@@ -9,7 +9,6 @@
 in
   pkgs.mkShell {
     packages = with pkgs; [
-      ruff
       just
       pythonWithPackages
     ];

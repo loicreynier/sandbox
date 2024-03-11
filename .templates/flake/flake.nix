@@ -1,10 +1,7 @@
 {
   description = "Sandbox template";
 
-  outputs = {
-    self,
-    nixpkgs,
-  }: let
+  outputs = {nixpkgs}: let
     supportedSystems = [
       "x86_64-linux"
     ];

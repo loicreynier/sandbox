@@ -2,7 +2,7 @@
 
 """Script to generate the `README.md`"""
 
-__author__ = ["Loïc Reynier <loic@loicreynier.fr>"]
+__author__ = ["Loïc Reynier <loic+dev@loicreynier.fr>"]
 __version__ = "0.1.3"
 __changelog__ = {
     "0.1.1": "sort castles",
@@ -29,9 +29,7 @@ def make_readme() -> None:
         # Generate sand castles list
         for path in castles:
             try:
-                with open(
-                    path + "README.md", "r", encoding="utf-8"
-                ) as src_file:
+                with open(path + "README.md", "r", encoding="utf-8") as src_file:
                     lines = src_file.readlines()
                     title = lines[0][2:-1]
                     desc = lines[2][:-1]

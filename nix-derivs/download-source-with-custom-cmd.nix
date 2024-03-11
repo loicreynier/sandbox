@@ -9,8 +9,10 @@
 {pkgs ? import <nixpkgs> {}}:
 pkgs.mkShell {
   name = "cuda-env-shell";
-  buildInputs = with pkgs; [
-    (cudatoolkit.overrideAttrs (finalAttrs: previousAttrs: {
+  buildInputs = with pkgs; let
+    baseUrl = "https://developer.download.nvidia.com/compute/cuda";
+  in [
+    (cudatoolkit.overrideAttrs (_: previousAttrs: {
       inherit (previousAttrs) pname;
       src =
         runCommandLocal "${previousAttrs.pname}.run" {
@@ -26,7 +28,7 @@ pkgs.mkShell {
             --verbose \
             --insecure \
             --output "$out" \
-            "https://developer.download.nvidia.com/compute/cuda/11.8.0/local_installers/cuda_11.8.0_520.61.05_linux.run"
+            "${baseUrl}/11.8.0/local_installers/cuda_11.8.0_520.61.05_linux.run"
         '';
     }))
   ];

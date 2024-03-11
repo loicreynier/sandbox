@@ -1,11 +1,11 @@
 {
-  "Version": "2.7.2",
+  "Version": "3.0.0",
   "Verbose": false,
   "Debug": false,
   "IgnoreDefaults": false,
   "SpacesAftertabs": false,
   "NoColor": false,
-  "Exclude": ["\\.py$"],
+  "Exclude": ["\\.py$", "\\.md", "\\.lock"],
   "AllowedContentTypes": [],
   "PassedFiles": [],
   "Disable": {

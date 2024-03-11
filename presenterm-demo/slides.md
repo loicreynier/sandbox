@@ -10,8 +10,9 @@ theme:
         background: 1e1e1e
 ---
 
-Title slide
+<!-- markdownlint-disable MD025 -->
 
+Title slide
 
 The title slide can be defined by using a YAML frontmatter block
 at the beginning of the Markdown file:
@@ -29,8 +30,8 @@ The slide's theme can also be configured in the front matter:
 ```yaml
 ---
 theme:
-  name: dark # from buil-in themes
-  path: ./themes/epic.yaml # or spefiy the path for it
+  name: dark # from built-in themes
+  path: ./themes/epic.yaml # or specify the path for it
   override: # or override part of the them
     default:
       colors:
@@ -40,15 +41,13 @@ theme:
 
 <!-- end_slide -->
 
-Slides
----
+## Slides
 
 The slide is delimited by a CommonMark setext header
 and a `end_slide` HTML command:
 
-```
-Title
----
+```markdown
+## Title
 
 ## Subheaders
 
@@ -70,11 +69,12 @@ Slides can be paused by using the `pause` HTML command:
 This allows you to:
 
 <!-- pause -->
-* Create suspense.
+
+- Create suspense.
 <!-- pause -->
-* Have more interactive presentations.
+- Have more interactive presentations.
 <!-- pause -->
-* Possibly more!
+- Possibly more!
 
 # Columns
 
@@ -87,7 +87,7 @@ organize content into columns.
 
 <!-- column: 1 -->
 
-```
+```markdown
 <!-- column_layout: [2, 1] -->
 
 <!-- column: 0 -->
@@ -101,4 +101,5 @@ organize content into columns.
 
 <!-- reset_layout -->
 ```
+
 <!-- reset_layout -->

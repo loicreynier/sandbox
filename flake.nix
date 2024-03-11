@@ -1,15 +1,6 @@
 {
   description = "Sandbox";
 
-  inputs = {
-    flake-utils.url = "github:numtide/flake-utils";
-    nixpkgs.url = "github:NixOS/nixpkgs";
-    pre-commit-hooks = {
-      url = "github:cachix/pre-commit-hooks.nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-  };
-
   outputs = inputs @ {
     self,
     flake-utils,
@@ -58,13 +49,22 @@
 
             alejandra.enable = true;
             commitizen.enable = true;
+            checkmake.enable = true;
+            clang-format.enable = true;
+            deadnix.enable = true;
             editorconfig-checker.enable = true;
+            gofmt.enable = true;
             markdownlint.enable = true;
+            nil.enable = true;
             prettier.enable = true;
-            shellcheck.enable = true;
             ruff.enable = true;
+            shfmt.enable = true;
+            shellcheck.enable = true;
             statix.enable = true;
+            taplo.enable = true;
             typos.enable = true;
+            typstfmt.enable = true;
+            yamllint.enable = true;
           };
         };
       };
@@ -81,4 +81,13 @@
         };
       };
     });
+
+  inputs = {
+    flake-utils.url = "github:numtide/flake-utils";
+    nixpkgs.url = "github:NixOS/nixpkgs";
+    pre-commit-hooks = {
+      url = "github:NorfairKing/nix-pre-commit-hooks/typstfmt";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+  };
 }

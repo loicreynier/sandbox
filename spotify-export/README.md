@@ -2,8 +2,6 @@
 
 Python script to export Spotify playlists to CSV files.
 
-<!-- markdownlint-disable MD013 -->
-
 ## Usage
 
 1. Create an app on the [Spotify developer portal](https://developer.spotify.com/dashboard).
