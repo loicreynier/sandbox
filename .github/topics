@@ -5,6 +5,7 @@ python-scientific
 nix
 go
 fortran
+cuda
 typst
 numbat
 coconut-lang

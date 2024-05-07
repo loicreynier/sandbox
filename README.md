@@ -8,6 +8,7 @@ Sandbox environment for conducting small tests that I maintain a record of.
 
 - [`advection-stab`](./advection-stab): Python script to study Euler methods' stability for the advection equation.
 - [`coconut-factorial`](./coconut-factorial): Elegant and pointless factorial implementation in [Coconut](http://coconut-lang.org).
+- [`cuda-demo`](./cuda-demo): Small CUDA samples.
 - [`detect-windarkmode`](./detect-windarkmode): Dirty function to detect Windows dark mode.
 - [`f03cli`](./f03cli): Fortran 2003 CLI argument parser example.
 - [`gmres-scipy`](./gmres-scipy): Wrapper for the GMRES provided by SciPy.

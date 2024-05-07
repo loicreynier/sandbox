@@ -1,0 +1,7 @@
+# Nix generated
+/.pre-commit-config.yaml
+result
+
+# Builds
+/bin/
+/obj/

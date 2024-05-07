@@ -1,0 +1,13 @@
+container_name := "cuda_test"
+
+make:
+	make
+
+run: make
+	./bin/run
+
+build-container:
+	podman build -t {{ container_name }} .
+
+run-container:
+	podman run --rm --device=nvidia.com/gpu=all {{ container_name }}

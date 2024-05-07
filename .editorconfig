@@ -10,6 +10,9 @@ indent_size = 2
 tab_width = 2
 max_line_length = 80
 
+[*.nix]
+max_line_length = unset
+
 [*.md]
 indent_size = unset
 trim_trailing_whitespace = false
@@ -22,8 +25,15 @@ max_line_length = 88
 [*.sh]
 max_line_length = unset
 
-[{Justfile,Makefile,*.go}]
+[*.go]
 indent_style = tab
+indent_size = 2
+tab_width = 2
+
+[{Makefile,Justfile}]
+indent_style = tab
+indent_size = 4
+tab_width = 4
 
 [*.typ]
 max_line_length = 100
