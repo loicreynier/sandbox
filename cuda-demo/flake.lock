@@ -92,13 +92,29 @@
         "type": "github"
       }
     },
+    "lmod": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1713046088,
+        "narHash": "sha256-A1mMpYGxAyrplSQo2wfyA6Dy/oTgq5/POfuXmZXs4WE=",
+        "owner": "TACC",
+        "repo": "Lmod",
+        "rev": "7940a1c13383a4527c2e2731eada34b9cfe77157",
+        "type": "github"
+      },
+      "original": {
+        "owner": "TACC",
+        "repo": "Lmod",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1714809261,
-        "narHash": "sha256-hfBmnYFyz9I1mdrC3tX1A+dF9cOUcds5PIMPxrT+cRk=",
+        "lastModified": 1715037484,
+        "narHash": "sha256-OUt8xQFmBU96Hmm4T9tOWTu4oCswCzoVl+pxSq/kiFc=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "d32560238207b8e26d88b265207b216ee46b8450",
+        "rev": "ad7efee13e0d216bf29992311536fce1d3eefbef",
         "type": "github"
       },
       "original": {
@@ -124,11 +140,29 @@
         "type": "github"
       }
     },
+    "nur-dguibert": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1713601033,
+        "narHash": "sha256-JbGtDEsG0svmxnvZRO7p3hz0M4XMnk9viwPQZzOi78I=",
+        "owner": "dguibert",
+        "repo": "nur-packages",
+        "rev": "c12784ec76749509e3bd47889cb417fd5723a134",
+        "type": "github"
+      },
+      "original": {
+        "owner": "dguibert",
+        "repo": "nur-packages",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "flake-utils": "flake-utils",
         "git-hooks": "git-hooks",
-        "nixpkgs": "nixpkgs"
+        "lmod": "lmod",
+        "nixpkgs": "nixpkgs",
+        "nur-dguibert": "nur-dguibert"
       }
     },
     "systems": {
