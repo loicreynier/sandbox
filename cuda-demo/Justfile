@@ -1,4 +1,5 @@
 container_name := "cuda_test"
+default_container_cmd := "./f.out"
 
 make:
 	make
@@ -9,5 +10,5 @@ run: make
 build-container:
 	podman build -t {{ container_name }} .
 
-run-container:
-	podman run --rm --device=nvidia.com/gpu=all {{ container_name }}
+run-container cmd=default_container_cmd: build-container
+	podman run --rm --device=nvidia.com/gpu=all {{ container_name }} {{ cmd }}
