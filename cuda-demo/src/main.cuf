@@ -1,0 +1,83 @@
+module kernel
+    contains
+    attributes(global) subroutine vecAdd(n, a, b, c)
+        integer, value :: n
+        real(8), device :: a(n), b(n), c(n)
+        integer :: id
+
+        id = (blockidx%x-1)*blockdim%x + threadidx%x
+
+        if (id <= n) then
+            c(id) = a(id) + b(id)
+        endif
+    end subroutine vecAdd
+end module kernel
+
+program main
+    use cudafor
+    use kernel
+
+    type(dim3) :: blockSize, gridSize
+    real(8) :: sum_
+    real(8) :: max_err = 1.d-8
+    integer :: i
+    integer :: n = 2048 * 2048 ! Vector size
+
+    ! Host vectors
+    real(8),dimension(:),allocatable :: h_a
+    real(8),dimension(:),allocatable :: h_b
+    real(8),dimension(:),allocatable :: h_c
+
+    ! Device vectors
+    real(8),device,dimension(:),allocatable :: d_a
+    real(8),device,dimension(:),allocatable :: d_b
+    real(8),device,dimension(:),allocatable :: d_c
+
+    ! Allocate memory for each vector on host
+    allocate(h_a(n))
+    allocate(h_b(n))
+    allocate(h_c(n))
+
+    ! Allocate memory for each vector on GPU
+    allocate(d_a(n))
+    allocate(d_b(n))
+    allocate(d_c(n))
+
+    ! Initialize host vectors
+    do i=1,n
+        h_a(i) = sin(i*1.d0)*sin(i*1.d0)
+        h_b(i) = cos(i*1.d0)*cos(i*1.d0)
+    enddo
+
+    ! Implicit copy of host vectors to device
+    d_a = h_a(1:n)
+    d_b = h_b(1:n)
+
+    blockSize = dim3(1024,1,1)
+    gridSize = dim3(ceiling(real(n)/real(blockSize%x)),1,1)
+    call VecAdd<<<gridSize, blockSize>>>(n, d_a, d_b, d_c)
+
+    ! Implicit copy of device array to host
+    h_c = d_c(1:n)
+
+    sum_ = 0.0;
+    do i=1,n
+        sum_ = sum_ +  h_c(i)
+    enddo
+    sum_ = sum_/real(n)
+    if (abs(sum_ - 1.d0) > max_err) then
+      print *, sum_
+      call exit(1)
+    end if
+
+    ! Deallocate host memory
+    deallocate(h_a)
+    deallocate(h_b)
+    deallocate(h_c)
+
+    ! Deallocate device memory
+    deallocate(d_a)
+    deallocate(d_b)
+    deallocate(d_c)
+
+end program main
