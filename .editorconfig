@@ -26,9 +26,15 @@ max_line_length = 88
 max_line_length = unset
 
 [*.go]
+max_line_length = 100
 indent_style = tab
 indent_size = 2
 tab_width = 2
+
+[*.sum]
+indent_size = unset
+indent_style = unset
+max_line_length = unset
 
 [{Makefile,Justfile}]
 indent_style = tab
