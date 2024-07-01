@@ -1,3 +1,4 @@
+@name("Factorial")
 fn factorial(n: Scalar) -> Scalar =
     if n < 1
         then 1

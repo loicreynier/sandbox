@@ -1,0 +1,14 @@
+struct Vector {
+  x: Length,
+  y: Length,
+}
+
+let origin   = Vector { x: 0 m, y: 0 m }
+let position = Vector { x: 6 m, y: 8 m }
+
+@name("Euclidean distance")
+fn euclidean_distance(a: Vector, b: Vector) =
+  sqrt((a.x - b.x)² + (a.y - b.y)²)
+
+assert_eq(euclidean_distance(origin, position), 10 m)
+

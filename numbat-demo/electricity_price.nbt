@@ -1,6 +1,8 @@
 let base_price: Money = 30€
 let price: Money / Energy = 0.2276 euro / kWh
 
+@name("Electricity price")
+@description("Electricity price for a given consumption.")
 fn electricity_price(consumption: Energy) -> Money =
     base_price + consumption * price
 
