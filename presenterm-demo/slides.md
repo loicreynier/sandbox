@@ -10,8 +10,6 @@ theme:
         background: 1e1e1e
 ---
 
-<!-- markdownlint-disable MD025 -->
-
 Title slide
 
 The title slide can be defined by using a YAML frontmatter block

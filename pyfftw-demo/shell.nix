@@ -1,10 +1,14 @@
 {
   pkgs ? (
     let
-      inherit (builtins) fetchTree fromJSON readFile;
-      inherit ((fromJSON (readFile ../flake.lock)).nodes) nixpkgs;
+      # Last commit before `pyfftw` was removed from `nixpkgs`
+      commit = "755b915a158c9d588f08e9b08da9f7f3422070cc";
+      nixpkgs = builtins.fetchTarball {
+        url = "https://github.com/NixOS/nixpkgs/archive/${commit}.tar.gz";
+        sha256 = "sha256:15brcl2i6hk7nq8mmg71pfkf61swq2swjw11i1pc7bcb59hmh909";
+      };
     in
-      import (fetchTree nixpkgs.locked) {}
+      import nixpkgs {}
   ),
 }: let
   pythonWithPackages = pkgs.python3.withPackages (p:
@@ -15,7 +19,7 @@
     ]);
 in
   pkgs.mkShell {
-    packages = with pkgs; [
+    packages = [
       pythonWithPackages
     ];
   }

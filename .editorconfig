@@ -36,7 +36,10 @@ indent_size = unset
 indent_style = unset
 max_line_length = unset
 
-[{Makefile,Justfile}]
+[Justfile]
+indent_size = 4
+
+[Makefile]
 indent_style = tab
 indent_size = 4
 tab_width = 4

@@ -1,7 +1,11 @@
+# Run test
+test:
+    python ./gmres.py
+
 # Open documentation
 open-docs: build-docs
-	xdg-open ./docs/index.html
+    xdg-open ./docs/index.html
 
 # Build documentation using `pdoc`
 build-docs:
-	pdoc --math ./gmres.py -o ./docs
+    pdoc --math ./gmres.py -o ./docs

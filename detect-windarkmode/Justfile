@@ -1,0 +1,2 @@
+test:
+    python.exe ./detect_windarkmode.py

@@ -3,12 +3,12 @@ out := "./main.out"
 
 # Test program
 test: format build
-	{{out}} --help
+    {{ out }} --help
 
 # Build program
 build:
-	gfortran {{src}} -o {{out}}
+    gfortran {{ src }} -o {{ out }}
 
 # Format code
 format:
-	fprettify {{src}}
+    fprettify {{ src }}

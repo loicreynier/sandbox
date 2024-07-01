@@ -84,7 +84,7 @@
 
   inputs = {
     flake-utils.url = "github:numtide/flake-utils";
-    nixpkgs.url = "github:NixOS/nixpkgs";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     pre-commit-hooks = {
       url = "github:NorfairKing/nix-pre-commit-hooks/typstfmt";
       inputs.nixpkgs.follows = "nixpkgs";
