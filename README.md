@@ -15,6 +15,7 @@ Sandbox environment for conducting small tests that I maintain a record of.
 - [`gmres.py`](./gmres.py): Dirty unoptimized Python implementation of the GMRES algorithm.
 - [`isosurf-skimage`](./isosurf-skimage): Isosurface calculation with scikit-image example.
 - [`jmtpfs-pyudev`](./jmtpfs-pyudev): MTP device monitoring and mounting dirty script using `jmtpfs` and pyudev.
+- [`multigrid-laplace2d.py`](./multigrid-laplace2d.py): Dirty unoptimized Python implementation of the multigrid method for solving the 2D Laplace equation.
 - [`nix-derivs`](./nix-derivs): Stuff build with Nix™.
 - [`numbat-demo`](./numbat-demo): Small scripts to test [Numbat](https://numbat.dev) features.
 - [`porn.py`](./porn.py): Cool and horrific miscellaneous Python stuff.
