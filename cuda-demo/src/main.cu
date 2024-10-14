@@ -49,11 +49,11 @@ int main(void) {
   int blocksPerGrid = (N + threadsPerBlock - 1) / threadsPerBlock;
   VecAdd<<<blocksPerGrid, threadsPerBlock>>>(d_a, d_b, d_c, N);
 
-  // Copy result from device memory to host memory
-  cudaMemcpy(h_c, d_c, size, cudaMemcpyDeviceToHost);
-
   // Synchronize before running more host code
   cudaDeviceSynchronize();
+
+  // Copy result from device memory to host memory
+  cudaMemcpy(h_c, d_c, size, cudaMemcpyDeviceToHost);
 
   // Verification
   for (int i = 0; i < N; i++) {
