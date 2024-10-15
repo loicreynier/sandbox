@@ -1,0 +1,7 @@
+# Logs
+.logamgx
+
+# Builds
+/bin/
+/obj/
+*.out
