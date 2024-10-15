@@ -2,10 +2,10 @@ container_name := "cuda_test"
 default_container_cmd := "./f.out"
 
 make:
-	make
+	make bin/c.out
 
 run: make
-	./bin/run
+	./bin/c.out
 
 build-container:
 	podman build -t {{ container_name }} .

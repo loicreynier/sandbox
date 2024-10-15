@@ -12,4 +12,5 @@ module load nvidia/nvhpc/22.7-cuda-11.7-majslurm
 
 nvidia-smi
 make -B
-./bin/run
+./bin/c.out
+./bin/f.out
