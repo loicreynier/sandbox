@@ -1,7 +1,13 @@
 # Usage: `nix run github:nix-community/nixt -- test_nixt.nix`
 # Does not work? Test are not collected
 {
-  pkgs ? import <nixpkgs> {},
+  pkgs ? (
+    let
+      inherit (builtins) fetchTree fromJSON readFile;
+      inherit ((fromJSON (readFile ../../flake.lock)).nodes) nixpkgs;
+    in
+      import (fetchTree nixpkgs.locked) {}
+  ),
   nixt,
 }: let
   inherit (pkgs) lib;
@@ -11,5 +17,3 @@ in
     "even number" = math.isEven 2 == true;
     "odd number" = math.isEven (-18) == true;
   }
-# vim: ft=nix
-

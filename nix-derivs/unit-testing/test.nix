@@ -1,5 +1,13 @@
 # Usage: `nix eval --impure --expr 'import ./test.nix {}'`
-{pkgs ? import <nixpkgs> {}}: let
+{
+  pkgs ? (
+    let
+      inherit (builtins) fetchTree fromJSON readFile;
+      inherit ((fromJSON (readFile ../../flake.lock)).nodes) nixpkgs;
+    in
+      import (fetchTree nixpkgs.locked) {}
+  ),
+}: let
   inherit (pkgs) lib;
   inherit (lib) runTests;
   math = import ./math.nix {inherit lib;};
