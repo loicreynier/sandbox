@@ -17,16 +17,16 @@ AMGX_LIBS      = -L$(AMGX_LIBS_PATH)
 CUDA_LIBS_PATH = $(CUDA_HOME)/lib64
 CUDA_LIBS      = -L$(CUDA_LIBS_PATH)
 
-ifeq ($(NVHPC_ROOT),)
-	CC = icc
-	FC = ifort
-else
-	CC = nvcc
-	FC = nvfortran
-endif
+# ifeq ($(NVHPC_ROOT),)
+# 	CC = icc
+# 	FC = ifort
+# else
+# 	CC = nvcc
+# 	FC = nvfortran
+# endif
 
-MPICC = mpicc
-MPIFC = mpif90
+CC = mpicc
+FC = mpif90
 
 ifeq ($(FC), ifort)
 	FFLAGS = -O3 -xCOMMON-AVX512
@@ -59,14 +59,13 @@ endif
 src_dir     := src
 bin_dir     := bin
 obj_dir     := obj
-target_seq  := $(bin_dir)/amgx.out
-target_mpi  := $(bin_dir)/amgx-mpi.out
+target      := $(bin_dir)/amgx.out
 
 .PHONY: all clean test print-vars
 
-all: $(target_seq) # $(target_mpi)
+all: $(target)
 
-$(target_seq): $(obj_dir)/amgx.o $(obj_dir)/main.o
+$(target): $(obj_dir)/amgx.o $(obj_dir)/main.o
 	@mkdir -p $(@D)
 	$(FC) $(FFLAGS) $^ -o $@ $(LDFLAGS)
 
