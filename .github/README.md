@@ -9,6 +9,7 @@ Sandbox environment for conducting small tests that I maintain a record of.
 <!-- markdownlint-disable MD013 -->
 
 - [`advection-stab`](../advection-stab): Python script to study Euler methods' stability for the advection equation.
+- [`acc-demo`](../acc-demo): [OpenACC](https://www.openacc.org) Fortran sample.
 - [`amgx-demo`](../amgx-demo): [AMGX](https://developer.nvidia.com/amgx) sample using a Fortran interface.
 - [`coconut-factorial`](../coconut-factorial): Elegant and pointless factorial implementation in [Coconut](http://coconut-lang.org).
 - [`cuda-demo`](../cuda-demo): Small CUDA samples.
