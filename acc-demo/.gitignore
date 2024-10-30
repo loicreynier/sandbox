@@ -1,3 +1,6 @@
 # Builds
 /bin
-*.out
+
+# Run outputs
+/run/log*
+/run/nsys-report*
