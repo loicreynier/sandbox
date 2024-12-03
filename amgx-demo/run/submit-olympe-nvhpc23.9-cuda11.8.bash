@@ -8,7 +8,9 @@
 #SBATCH --mem=16g
 
 module purge
-module load intel/18.2 gcc/5.4.0 cuda/9.1.85.3 openmpi/icc/2.0.2.10
+module load nvidia/nvhpc/23.9-cuda-11.8-majslurm
+module load amgx/2.2.x-nvhpc
 
-make -B AMGX_ROOT=/usr/local/amgx/AMGX
-./bin/amgx.out
+make -B -C ..
+
+./amgx.out
