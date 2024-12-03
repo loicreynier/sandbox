@@ -1,0 +1,6 @@
+{
+  "ext_source_dirs": [
+    "/usr/local/nvidia_hpc_sdk/MAJSLURM/Linux_x86_64/23.9/comm_libs/openmpi/openmpi-3.1.5/lib",
+    "/usr/local/nvidia_hpc_sdk/MAJSLURM/Linux_x86_64/23.9/comm_libs/mpi/lib"
+  ]
+}
