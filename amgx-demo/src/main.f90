@@ -100,10 +100,19 @@ end module amgx_fortran
 
 program test_amgx_solve_poisson
 
+  use mpi
   use amgx_fortran
 
   implicit none
 
+  integer :: mpi_rank, mpi_size, mpi_ierr
+
+  call MPI_Init(mpi_ierr)
+  call MPI_comm_rank(MPI_Comm_world, mpi_rank, mpi_ierr)
+  call MPI_comm_size(MPI_Comm_world, mpi_size, mpi_ierr)
+
   call solve_poisson_amgx(5000, 5000)
+
+  call MPI_finalize(mpi_ierr)
 
 end program test_amgx_solve_poisson
