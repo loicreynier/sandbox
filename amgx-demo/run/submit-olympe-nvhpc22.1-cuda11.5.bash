@@ -13,4 +13,6 @@ module load amgx/2.2.x-nvhpc
 
 make -B -C ..
 
-./amgx.out
+mpirun --np 1 ./amgx.out
+
+jobinfo "${SLURM_JOBID}"
