@@ -5,7 +5,7 @@
     self,
     flake-utils,
     nixpkgs,
-    pre-commit-hooks,
+    git-hooks,
     ...
   }: let
     supportedSystems = ["x86_64-linux"];
@@ -26,7 +26,7 @@
       pkgs = import nixpkgs {inherit system;};
     in {
       checks = {
-        pre-commit-check = pre-commit-hooks.lib.${system}.run {
+        pre-commit-check = git-hooks.lib.${system}.run {
           src = ./.;
 
           hooks = {
@@ -56,7 +56,12 @@
             gofmt.enable = true;
             markdownlint.enable = true;
             nil.enable = true;
-            prettier.enable = true;
+            prettier = {
+              enable = true;
+              excludes = [
+                "flake.lock"
+              ];
+            };
             ruff.enable = true;
             shfmt.enable = true;
             shellcheck.enable = true;
@@ -85,9 +90,10 @@
   inputs = {
     flake-utils.url = "github:numtide/flake-utils";
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
-    pre-commit-hooks = {
-      url = "github:NorfairKing/nix-pre-commit-hooks/typstfmt";
+    git-hooks = {
+      url = "github:cachix/git-hooks.nix";
       inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-utils.follows = "flake-utils";
     };
   };
 }
