@@ -1,3 +1,4 @@
+import sys
 import numpy as np
 from scipy.sparse import coo_matrix
 
@@ -17,6 +18,8 @@ class AMGXSystem:
         shape = (num_rows, num_cols)
         num_entries = int(size_data[2])
 
+        self._size = num_rows
+
         # Matrix
         data_start_idx = 3
         matrix_data = lines[data_start_idx : data_start_idx + num_entries]
@@ -35,7 +38,7 @@ class AMGXSystem:
     def _parse_matrix(self, lines: list, shape: tuple[int, int]) -> None:
         rows, cols, data = [], [], []
         for line in lines:
-            col, row, value = map(float, line.split())
+            row, col, value = map(float, line.split())
             # Convert to 0-based indexing
             rows.append(int(row - 1))
             cols.append(int(col - 1))
@@ -44,6 +47,10 @@ class AMGXSystem:
 
     def _vector_from_lines(self, lines: list) -> np.ndarray:
         return np.array([float(line.strip()) for line in lines])
+
+    @property
+    def size(self) -> int:
+        return self._size
 
     @property
     def matrix(self) -> np.ndarray:
@@ -75,6 +82,10 @@ def print_array_diff(a, b, tol: float = 1e-12, strict: bool = False) -> None:
 
 if __name__ == "__main__":
     system = AMGXSystem("./AMGX_system.mtx")
+    print("System size:", system.size)
+    if system.size <= 64:
+        np.set_printoptions(linewidth=700, threshold=sys.maxsize)
+        print(system.matrix)
     rhs = np.loadtxt("./rhs.dat")
     sol = np.loadtxt("./sol.dat")
     print_array_diff(system.rhs, rhs)
